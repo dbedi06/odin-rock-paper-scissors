@@ -1,5 +1,3 @@
-console.log("Hello World!")
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -35,12 +33,22 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
   let roundNum = 1;
-  console.log("Round ")
   while (roundNum <= 5) {
+    console.log(`Round ${roundNum}: Start!`);
+    console.log(`Current Score - You: ${humanScore}, Computer: ${computerScore}`)
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
     roundNum++;
   }
+  if (humanScore > computerScore) {
+    console.log("Game over. You win!");
+  } else if (humanScore < computerScore) {
+    console.log("Game over. You lose!");
+  } else {
+    console.log("Game over. It's a tie!");
+  }
+  console.log(`Final Score - You: ${humanScore}, Computer: ${computerScore}`);
 }
 
+playGame();
