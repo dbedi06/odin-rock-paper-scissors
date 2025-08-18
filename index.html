@@ -8,6 +8,18 @@
 </head>
 <body>
   <h1>Rock Paper Scissors Game</h1>
-  <p>This game is played through the console. Refresh to play again. Please open the console and have fun!</p>
+  <p>This is a classic rock, paper, and scissors game! Click a button below and have fun!</p>
+  <div id="game">
+    <div id="scores">
+      <p id="player">Player Score: 0 </p>
+      <p id="computer">Computer Score: 0</p>
+    </div>
+    <h2 id="announcement"></h2>
+    <div id="choices">
+      <button id="rock" onclick="playRound('Rock')">Rock</button>
+      <button id="paper" onclick="playRound('Paper')">Paper</button>
+      <button id="scissors" onclick="playRound('Scissors')">Scissors</button>
+    </div>
+  </div>
 </body>
 </html>
